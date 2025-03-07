@@ -1,0 +1,27 @@
+// Styles du logo
+.logo-container {
+  @include flex-center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: 40px;
+
+  .half-circle {
+    width: 200px;
+    height: 100px;
+    margin-right: 20px;
+  }
+
+  .cherry-blossom img {
+    width: 125px;
+    @include absolute-center;
+    top: 50%;
+  }
+
+  .app-name {
+    font-size: 3em;
+    color: $secondary-color;
+    text-align: center;
+    margin-top: 0;
+  }
+}

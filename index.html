@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preloader Personnalisé</title>
+    <link rel="stylesheet" href="/scss/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="preloader">
+      <!-- Nom de l'application -->
+      <h1 class="app-name">Sakura Go</h1>
+
+      <!-- Demi-cercle rouge -->
+      <div class="half-circle"></div>
+
+      <!-- Cerisier japonais -->
+      <div class="cherry-blossom">
+        <img src="./assets/images/cherry-blossom.png" alt="Cerisier Japonais" />
+      </div>
+
+      <!-- Conteneur pour la barre de progression et le ninja -->
+      <div class="progress-container">
+        <!-- Barre de progression -->
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+
+        <!-- Petit ninja qui court -->
+        <div class="ninja"></div>
+      </div>
+    </div>
+
+    <!-- Conteneur pour le logo et le nom de l'application -->
+  <div class="logo-container">
+    <div class="half-circle"></div>
+    <div class="cherry-blossom">
+      <img src="./assets/images/cherry-blossom.png" alt="Cerisier Japonais" />
+    </div>
+    <h1 class="app-name">Sakura Go</h1>
+  </div>
+
+  <!-- Frame avec les boutons -->
+  <div class="frame">
+    <h2 class="select-level-text">Sélectionnez votre niveau</h2>
+    <div class="buttons-container">
+      <button class="home-button">
+        <span class="level">N5</span>
+        <span class="description">Débutant</span>
+      </button>
+      <button class="home-button">
+        <span class="level">N4</span>
+        <span class="description">Niveau conversation basique</span>
+      </button>
+      <button class="home-button">
+        <span class="level">N3</span>
+        <span class="description">Discussion avancée</span>
+      </button>
+      <button class="home-button">
+        <span class="level">N2</span>
+        <span class="description">Niveau business</span>
+      </button>
+      <button class="home-button">
+        <span class="level">N1</span>
+        <span class="description">Niveau natif</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+@charset "UTF-8";
+/* Styles de typographie */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Réinitialisation des styles par défaut */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.home-button {
+  padding: 15px 30px;
+  width: 300px;
+  font-size: 1.2em;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.home-button:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+.home-button .level {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.home-button .description {
+  font-size: 0.9em;
+  color: #e0e0e0;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+}
+.preloader .app-name {
+  font-size: 4em;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.preloader .half-circle {
+  width: 400px;
+  height: 200px;
+  background: red;
+  border-radius: 200px 200px 0 0;
+  position: relative;
+  margin-bottom: 74px;
+  overflow: hidden;
+}
+.preloader .cherry-blossom img {
+  width: 250px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 42.6%;
+}
+.preloader .progress-container {
+  position: relative;
+  width: 400px;
+  margin-top: 20px;
+}
+.preloader .progress-container .progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.preloader .progress-container .progress-bar .progress {
+  width: 0;
+  height: 100%;
+  background: red;
+  border-radius: 5px;
+  animation: fillProgress 3s linear infinite;
+}
+.preloader .progress-container .ninja {
+  position: absolute;
+  bottom: 10px;
+  left: -60px;
+  width: 80px;
+  height: 110px;
+  background: url("./assets/images/ninja-spritesheet.png") 0 0;
+  animation: runNinja 3s linear infinite, animateNinja 0.5s steps(2) infinite;
+  z-index: 2;
+}
+
+.frame {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+.frame .select-level-text {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+.frame .buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: 40px;
+}
+.logo-container .half-circle {
+  width: 200px;
+  height: 100px;
+  margin-right: 20px;
+}
+.logo-container .cherry-blossom img {
+  width: 125px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+.logo-container .app-name {
+  font-size: 3em;
+  color: #333;
+  text-align: center;
+  margin-top: 0;
+}
+
+.homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: #f8f8f8;
+  overflow: hidden;
+}
+
+.homepage .logo-container {
+  margin-bottom: 40px;
+}
+
+/*# sourceMappingURL=styles.css.map */
