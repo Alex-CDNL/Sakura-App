@@ -1,0 +1,252 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Styles pour le nom de l'application */
+.app-name {
+  font-size: 4em;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Demi-cercle rouge plein (taille augmentée) */
+.half-circle {
+  width: 400px;
+  height: 200px;
+  background: red;
+  border-radius: 200px 200px 0 0;
+  position: relative;
+  margin-bottom: 74px;
+  overflow: hidden;
+}
+
+/* Cerisier japonais */
+.cherry-blossom img {
+  width: 250px;
+  height: auto;
+  position: absolute;
+  top: 42.6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Conteneur pour la barre de progression et le ninja */
+.progress-container {
+  position: relative;
+  width: 400px;
+  margin-top: 20px;
+}
+
+/* Barre de progression */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Barre de progression animée */
+.progress {
+  width: 0;
+  height: 100%;
+  background: red;
+  border-radius: 5px;
+  animation: fillProgress 3s linear infinite;
+}
+
+/* Petit ninja qui court */
+.ninja {
+  position: absolute;
+  bottom: 10px;
+  left: -60px;
+  width: 80px;
+  height: 110px;
+  background: url("/assets/images/ninja-spritesheet.png") 0 0;
+  animation: runNinja 3s linear infinite, animateNinja 0.5s steps(2) infinite;
+  z-index: 2;
+}
+
+/* Animation de la barre de progression */
+@keyframes fillProgress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Animation du ninja qui court (déplacement) */
+@keyframes runNinja {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(400px);
+  }
+}
+
+/* Animation du ninja (sprite sheet) */
+@keyframes animateNinja {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -160px 0;
+  }
+}
+
+/* Styles pour le conteneur du logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+/* Ajustements pour le demi-cercle sur la page d'accueil */
+.logo-container .half-circle {
+  width: 200px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+/* Ajustements pour le cerisier sur la page d'accueil */
+.logo-container .cherry-blossom img {
+  width: 125px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Ajustements pour le nom de l'application sur la page d'accueil */
+.logo-container .app-name {
+  font-size: 3em;
+  color: #333;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* Styles pour la frame */
+.frame {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+/* Styles pour la page d'accueil */
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #f8f8f8;
+  overflow: hidden;
+}
+
+/* Cadre autour des boutons */
+.frame {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.select-level-text {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.home-button {
+  padding: 15px 30px;
+  width: 300px;
+  font-size: 1.2em;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.home-button:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+.level {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 0.9em;
+  color: #e0e0e0;
+}
+
+@media (max-width: 600px) {
+  .frame {
+    padding: 20px;
+  }
+  .home-button {
+    width: 100%;
+  }
+}
